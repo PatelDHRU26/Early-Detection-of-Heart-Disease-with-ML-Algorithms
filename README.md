@@ -1,68 +1,113 @@
 # ❤️ Heart Disease Prediction Using Machine Learning
 
-This project uses various machine learning algorithms to predict the presence of heart disease based on patient clinical data. It includes data preprocessing, model training, and performance evaluation using popular classifiers such as Naive Bayes, SVM, Logistic Regression, Random Forest, K-Nearest Neighbors, and Decision Tree.
+This project is a machine learning-based web application that predicts the likelihood of heart disease using patient health data. It uses several ML models and provides a simple frontend built with **Streamlit** for user interaction.
 
 ---
 
-## 📁 Dataset
+## 📌 Features
 
-- **File Used**: `hearts.csv`
-- **Features**:
-  - Gender
-  - ChestPainType
-  - RestingECG
-  - ExerciseAngina
-  - ST_Slope
-  - and other numerical medical attributes
-- **Target Variable**: `HeartDisease` (0 = No, 1 = Yes)
-
----
-
-## 🔧 Technologies & Libraries
-
-- **Language**: Python
-- **Libraries**:
-  - `pandas` – Data manipulation
-  - `numpy` – Numerical operations
-  - `scikit-learn` – Machine learning models & preprocessing
-  - `warnings` – Suppress warnings
+- Predicts heart disease using health indicators like age, blood pressure, cholesterol, etc.
+- User-friendly web interface built with **Streamlit**
+- Trained using multiple ML models:
+  - **Gaussian Naive Bayes**
+  - **Support Vector Machine**
+  - **Logistic Regression**
+  - **Random Forest**
+  - **K-Nearest Neighbors**
+  - **Decision Tree**
 
 ---
 
-## ⚙️ Installation
-
-```bash
-pip install pandas numpy scikit-learn
-**
 ## 🧠 Machine Learning Models Used
 
-1. **Gaussian Naive Bayes**
-2. **Support Vector Machine (SVM)**
-3. **Logistic Regression**
-4. **Random Forest Classifier**
-5. **K-Nearest Neighbors (KNN)**
-6. **Decision Tree Classifier**
+- **Gaussian Naive Bayes**
+- **Support Vector Machine (SVM)**
+- **Logistic Regression**
+- **Random Forest Classifier**
+- **K-Nearest Neighbors**
+- **Decision Tree**
 
+---
 
+## 📁 Project Structure
 
-📊 Model Evaluation
-All models are evaluated using accuracy score on a test set (20% of the data). Each model's performance is printed in the console.
+```
+Heart_Disease_Prediction/
+├── app.py                # Streamlit frontend
+├── model.pkl             # Trained Random Forest model
+├── hearts.csv            # Dataset
+├── training_script.py    # Python code to train the model
+└── README.md             # This file
+```
 
-Output:
-GaussionNB Accuracy is 0.85
-SVC Accuracy is 0.89
-LogisticRegression Accuracy is 0.88
-RandomForestClassifier Accuracy is 0.91
-KNeighborsClassifier Accuracy is 0.86
-DecisionTreeClassifier Accuracy is 0.87
+---
 
+## 💻 How to Run the Project
 
-📂 Project Structure
-heart-disease-prediction/
-├── hearts.csv
-├── heart_disease_prediction.py
-├── README.md
+### Step 1: Clone the Repository
 
+```bash
+git clone https://github.com/your-username/heart-disease-prediction.git
+cd heart-disease-prediction
+```
 
+### Step 2: Install Required Libraries
 
+```bash
+pip install -r requirements.txt
+```
 
+Or manually:
+
+```bash
+pip install pandas numpy scikit-learn streamlit
+```
+
+### Step 3: Run the Web App
+
+```bash
+streamlit run app.py
+```
+
+---
+
+## 📊 Inputs Used for Prediction
+
+- Age
+- Gender
+- Resting Blood Pressure
+- Cholesterol
+- Chest Pain Type
+- Resting ECG
+- Maximum Heart Rate
+- Exercise-Induced Angina
+- Oldpeak
+- ST Slope
+- Fasting Blood Sugar
+
+---
+
+## ✅ Output
+
+- Displays: **“Positive for Heart Disease”** or **“No Heart Disease”**
+
+---
+
+## 🛠️ Tools & Libraries
+
+- Python
+- Pandas, NumPy
+- Scikit-learn
+- Streamlit
+
+---
+
+## 🙌 Credits
+
+Dataset from [Kaggle: Heart Disease UCI](https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction)
+
+---
+
+## 📌 License
+
+This project is open source and free to use under the MIT License.
